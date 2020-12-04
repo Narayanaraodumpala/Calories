@@ -23,8 +23,12 @@ urlpatterns = [
 
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('signup/',views.signup,name='signup'),
+    path('logout/',views.logouttt,name='logout'),
     path('protiens/',views.protiens,name='protiens'),
     path('vaitamins/', views.vaitamins,name='vaitamins'),
 path('carbos/', views.carbos, name='carbos'),
-    path('glucos/',views.glucos,name='glucos')
+    path('glucos/',views.glucos,name='glucos'),
+    path('login_signup/',views.login_signup,name='login_signup'),
+    path('bmi/',views.bmi,name='bmi'),
+    path('calories/',views.calories,name='calories')
 ]

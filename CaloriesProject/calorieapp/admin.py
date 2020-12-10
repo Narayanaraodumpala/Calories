@@ -1,3 +1,9 @@
 from django.contrib import admin
-
+from  .models import *
 # Register your models here.
+
+
+
+admin.site.register(Userdetails)
+admin.site.register(FoodModel)
+admin.site.register(BMIModel)

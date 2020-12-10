@@ -5,5 +5,5 @@ from  .models import *
 
 
 admin.site.register(Userdetails)
-admin.site.register(FoodModel)
+
 admin.site.register(BMIModel)

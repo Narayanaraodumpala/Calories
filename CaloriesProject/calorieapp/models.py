@@ -17,23 +17,28 @@ class BMIModel(models.Model):
 
 
 class FoodModel(models.Model):
-      food=models.CharField(max_length=50,null=True)
-      food_type=models.CharField(max_length=30,null=True)
-      food_image=models.ImageField(upload_to='food_images/',null=True)
-
-      calories = models.FloatField(null=True)
-      water = models.FloatField(null=True)
-      protein = models.FloatField(null=True)
-      carbohydrates=models.FloatField(null=True)
-      sugar = models.FloatField(null=True)
-      fiber = models.FloatField(null=True)
-      fats=models.FloatField(null=True)
-      vitamin=models.FloatField(null=True)
+    food_choices=[('Rice','Rice'),('Potato','Potato'),('Brinjal','Brinjal'),('Ladyfinger','Ladyfinger'),
+                  ('beetroot','beetroot'),('capsicum','capsicum'),('mushrooms','mushrooms'),
+                  ('brocoli', 'brocoli'), ('cabbage', 'cabbage'), ('carrot', 'carrot'), ('cauliflower', 'cauliflower'),
+                  ('cucumber', 'cucumber'), ('garlic','garlic'),('onion','onion'),
+                  ('pumpkin','pumpkin'),('string beans or green beans','string beans or green beans'),('apple','apple'),
+                  ('apricot','apricot'),('avocodo','avocodo'),('banana','banana'),('blackberry','blackberry'),('cherry','cherry'),
+                  ('grapes','grapes'),('green olive','green olive'),('kiwifruit','kiwifruit'),('lemon','lemon'),('lime','lime'),
+                  ('mango','mango'),('orange','orange'),('papayya','papayya'),
+                  ('peach','peach'),('pineapple','pineapple'),('plum','plum'),('strawberry','strawberry'),('tomatto','tomatto'),
+                  ('corn','corn'),('sweet potato','sweet potato'),('watermelon','watermelon'),
 
 
 
 
-      def __str__(self):
-          return self.food
+                  ]
 
+    food_type_choices=[
+        ('Veg','Veg'), ('Non-Veg', 'Non-Veg'), ('Drinks', 'Drinks'),
+    ]
+    food = models.CharField(max_length=50, null=True,choices=food_choices)
+    food_type = models.CharField(max_length=30, null=True,choices=food_type_choices)
+
+    def __str__(self):
+        return self.food
 

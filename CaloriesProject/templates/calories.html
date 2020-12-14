@@ -36,21 +36,76 @@ background:url({% static 'cal.jpg' %}) no-repeat center center fixed ;
   <br><br> <h2 align="center" style="color:red">
        FoodType
    </h2>
-<br><br>
-  <h3 align="center" style="color: blue"><u style="color: #ffba00">Veg food</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u style="color:yellow">Non-Veg Food</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u style="color: #ffba00">Drinks </u></h3>
+
 <br><br>
   <table align="center">
+      <tr>
+          <th>
+              <h3 align="center" style="color: blue"><u style="color: #ffba00">Rice Item</u></h3>
+          </th>
+              <th>
+
+               <h3 align="center" style="color: blue"><u style="color: #ffba00">Curry food</u></h3>
+
+          </th>
+           <th>
+
+               <h3 align="center" style="color: blue"><u style="color: #ffba00">Salad</u></h3>
+
+          </th>
+             <th>
+
+               <h3 align="center" style="color: blue"><u style="color: #ffba00">Non-Veg</u></h3>
+
+          </th>
+           <th>
+
+               <h3 align="center" style="color: blue"><u style="color: #ffba00">Drinks</u></h3><br><br>
+<br><br>
+
+          </th>
+      </tr>
     <tr>
+           <form action="{% url 'food' %}" method="post">
         <th>
-            <form action="{% url 'food' %}" method="post">
+
                 {% csrf_token %}
-           Food =  {{ model.food }}<br><br>
-                food_type={{ model.food_type }}
-            <button type="submit" >Submit</button>
-            </form>
+            <span align="center" style="color: blue">Rice Item =</span>   {{ model.rice_item }}<br><br>
+                <span align="center" style="color: blue">RIce_Type =</span>{{ model.type }}<br><br>
+                <span align="center" style="color: blue">Quantity=</span>{{ model.quantity }}<br><br>
+<button type="submit" class="btn btn-outline-primary">Calculate</button>
+
         </th>
+
+
+
+
+
+
+           </form>
     </tr>
+  </table>
+  <table  align="center">
+      <tr >
+          <th >
+
+          </th>
+      </tr>
 </table>
+  <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+  </pre>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

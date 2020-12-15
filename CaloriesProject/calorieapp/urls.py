@@ -31,5 +31,7 @@ path('carbos/', views.carbos, name='carbos'),
     path('login_signup/',views.login_signup,name='login_signup'),
     path('bmi/',views.bmi,name='bmi'),
     path('calories/',views.caloriess,name='calories'),
-path('food/',views.food,name='food')
+path('food/',views.food,name='food'),
+    path('curry/',views.curry,name='curry'),
+    path('non_veg/',views.non_veg,name='non_veg')
 ]

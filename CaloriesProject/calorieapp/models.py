@@ -42,7 +42,7 @@ salad_choices=[
         ('corn', 'corn'), ('sweet potato', 'sweet potato'), ('watermelon', 'watermelon'),
     ]
 non_veg_choices=[
-    ('Nothing', 'Nothing'), ('Chicken', 'Chicken'), ('Egg', 'Egg'), ('Mutton', 'Mutton'),('Fish', 'Fish'), ('Crabs', 'Crabs')
+    ('Nothing', 'Nothing'), ('Chicken', 'Chicken'), ('Egg', 'Egg'), ('Mutton', 'Mutton'),('Fish', 'Fish'), ('Crabs', 'Crabs'),('Prawns', 'Prawns')
     ]
 drink_choices=[
     ('Nothing', 'Nothing'), ('Water', 'Water'), ('Milk', 'Milk'), ('Butter-Milk', 'Butter-Milk'), ('Coakes', 'Coakes'),
@@ -87,6 +87,13 @@ class CurryItemModel(models.Model):
 
     curry_item=models.CharField(max_length=30,choices=curry_choices,null=True)
     curry_type=models.CharField(max_length=30,choices=food_type_choices,null=True)
+    quantity=models.CharField(max_length=30,null=True)
+
+
+class Non_veg_model(models.Model):
+
+    non_veg_item=models.CharField(max_length=30,choices=non_veg_choices,null=True)
+    type=models.CharField(max_length=30,choices=food_type_choices,null=True)
     quantity=models.CharField(max_length=30,null=True)
 
 

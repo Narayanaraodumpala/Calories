@@ -10,3 +10,9 @@ class CurryForm(forms.ModelForm):
     class Meta:
         model=CurryItemModel
         fields="__all__"
+
+
+class Non_veg_Form(forms.ModelForm):
+    class Meta:
+        model=Non_veg_model
+        fields="__all__"
